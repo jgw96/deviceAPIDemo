@@ -5,8 +5,6 @@ window.addEventListener('devicelight', function(e) {
   
 });
 
-var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
-document.querySelector("#battLevel").textContent = battery.level;
 
 document.querySelector("#vibrateOnceButton").addEventListener("click",function(){
   navigator.vibrate(1000);
