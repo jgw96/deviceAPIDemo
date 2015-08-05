@@ -19,7 +19,7 @@ navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ video: { width: 1280, height: 720 } },
+   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
       function(stream) {
          var video = document.querySelector('video');
          video.src = window.URL.createObjectURL(stream);
@@ -34,6 +34,4 @@ if (navigator.getUserMedia) {
 } else {
    console.log("getUserMedia not supported");
 }
-
-
 
