@@ -1,8 +1,6 @@
-
-
 window.addEventListener('devicelight', function(e) {
   var lux = e.value;
-  document.querySelector('#wow').textContent = lux + ' lux';
+  document.querySelector('#result').textContent = lux + ' lux';
   
   if(lux < 50) {
     document.body.className = 'dim';
