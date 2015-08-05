@@ -1,4 +1,6 @@
-document.querySelector("#wow").addEventListener("devicelight",function(event){
+window.addEventListener("devicelight",function(event){
 
-	document.querySelector("#wow").text = event.value; 
+	if(event.value>100){
+		document.querySelector("#wow").text="its dim";
+	}
 })
