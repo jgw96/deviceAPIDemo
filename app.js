@@ -5,4 +5,8 @@ window.addEventListener('devicelight', function(e) {
   
 });
 
+navigator.getBattery().then(function(result){
+  document.querySelector("#battLevel").textContent = result.level;
+})
+
 
