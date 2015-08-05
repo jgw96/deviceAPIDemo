@@ -5,6 +5,9 @@ window.addEventListener('devicelight', function(e) {
   
 });
 
+var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+document.querySelector("#battLevel").textContent = battery.level;
+
 navigator.getBattery().then(function(result){
   document.querySelector("#battLevel").textContent = result.level;
 })
